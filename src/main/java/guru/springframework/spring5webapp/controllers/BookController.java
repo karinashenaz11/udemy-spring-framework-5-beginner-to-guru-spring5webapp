@@ -19,7 +19,7 @@ public class BookController {
 
     @RequestMapping("/books")
     public String getBooks(Model model){
-
+        //Thymeleaf will associate the list of books with a view called books which is returned.
         model.addAttribute("books", bookRepository.findAll());
 
         return "books";
