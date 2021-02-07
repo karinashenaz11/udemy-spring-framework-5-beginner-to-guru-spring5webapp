@@ -9,16 +9,17 @@ public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    String firstName;
-    String lastName;
+    private Long id;
+    private String firstName;
+    private String lastName;
 
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books  = new HashSet<>();
 
-    public Author(){
+    public Author() {
     }
-    public Author(String firstName, String lastName){
+
+    public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
