@@ -17,6 +17,6 @@ public class AuthorController {
     @RequestMapping("/authors")
     public String getAuthors(Model model){
         model.addAttribute("authors", authorRepository.findAll());
-        return "authors";
+        return "authors"; //if the template is in a folder, this should have "foldername/templatename" returned.and also the Request mapping should correspond
     }
 }
